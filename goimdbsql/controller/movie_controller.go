@@ -96,5 +96,5 @@ func (m *movieController) DeleteMoviesByID(c echo.Context) error {
 		return c.JSON(http.StatusBadRequest, echo.Map{"message!": "delete Movie error " + err.Error()})
 	}
 
-	return c.JSON(http.StatusBadRequest, echo.Map{"message!": "delete Movie success"})
+	return c.JSON(http.StatusOK, echo.Map{"message!": "delete Movie success"})
 }
